@@ -1,0 +1,494 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #2b2d42;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 32px;
+  background-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 24px;
+}
+
+.navbar-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.content-container {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #0f172a;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+/* Home Page */
+.home-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 32px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 48px 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  color: white;
+  margin-top: 0;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
+.btn-primary:hover {
+  background-color: #7dd3fc;
+}
+
+.btn-secondary {
+  background-color: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.feature-card p {
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Routes Page & RouteCard */
+.routes-page {
+  padding: 0 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.route-card {
+  background-color: white;
+  padding: 28px;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.route-card:hover {
+  transform: translateY(-4px);
+}
+
+.route-card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.route-card p {
+  margin: 8px 0;
+  color: #475569;
+}
+
+.route-card button {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px;
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.route-card button:hover {
+  background-color: #2563eb;
+}
+
+/* Booking Page */
+.booking-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.booking-form-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .booking-form-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.booking-form,
+.booking-details {
+  padding: 28px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form {
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  background-color: #f8fafc;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.booking-form button {
+  margin-top: 12px;
+  padding: 14px;
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.booking-form button:hover {
+  background-color: #2563eb;
+}
+
+.booking-details {
+  text-align: left;
+}
+
+.booking-details h3 {
+  margin-top: 0;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.booking-details p {
+  margin: 10px 0;
+  color: #475569;
+}
+
+.total-fare {
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.total-fare strong {
+  color: #16a34a;
+}
+
+/* Booking History Page */
+.history-page {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.history-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.history-button {
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #0f172a;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.history-button:hover {
+  background-color: #1e293b;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: 8px;
+}
+
+.filter-group select {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font: inherit;
+}
+
+.history-table-wrapper {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.history-table th,
+.history-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.history-table th {
+  background-color: #0f172a;
+  color: white;
+  font-weight: 600;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.no-bookings {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+}
+
+.line-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.line-red-line { background-color: #e63946; }
+.line-blue-line { background-color: #1d3557; }
+.line-green-line { background-color: #2a9d8f; }
+.line-purple-line { background-color: #7209b7; }
+.line-default { background-color: #64748b; }
+
+/* Responsive Media Queries */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .navbar-links {
+    justify-content: flex-start;
+    gap: 10px 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .home-page,
+  .routes-page,
+  .booking-page,
+  .history-page {
+    padding-inline: 16px;
+  }
+
+  .history-table-wrapper {
+    background-color: transparent;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .history-table,
+  .history-table thead,
+  .history-table tbody,
+  .history-table tr,
+  .history-table td {
+    display: block;
+  }
+
+  .history-table {
+    min-width: 0;
+  }
+
+  .history-table thead {
+    display: none;
+  }
+
+  .history-table tr {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .history-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: right;
+    padding: 10px 0;
+  }
+
+  .history-table td::before {
+    color: #0f172a;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .history-table td:nth-child(1)::before { content: "Passenger"; }
+  .history-table td:nth-child(2)::before { content: "Metro Line"; }
+  .history-table td:nth-child(3)::before { content: "Route"; }
+  .history-table td:nth-child(4)::before { content: "Tickets"; }
+  .history-table td:nth-child(5)::before { content: "Type"; }
+  .history-table td:nth-child(6)::before { content: "Total Fare"; }
+  .history-table td:nth-child(7)::before { content: "Booked At"; }
+
+  .history-table td:last-child {
+    border-bottom: 0;
+  }
+}
